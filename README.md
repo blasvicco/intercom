@@ -38,7 +38,8 @@ return [
 ```
 
 Where `{{ PAGE }}` and `{{ DETAILS }}` are the fields from the `$_POST`.
-The other fields are also available like `{{ EMAIL }}` or `{{ NAME }}`.
+
+Other fields are also available like `{{ EMAIL }}` or `{{ NAME }}`.
 
 ## Using Intercom
 
