@@ -146,7 +146,19 @@ class ApiController extends Controller {
         'type'  => 'admin',
         'email' => $settings['appId'] . '@incoming.intercom.io',
       ],
-      'body' => str_replace(['{{ PAGE }}', '{{ DETAILS }}'], [$ticket['page'], $ticket['details']], $settings['body']),
+      'body' => str_replace([
+          '{{ PAGE }}',
+          '{{ EMAIL }}',
+          '{{ NAME }}',
+          '{{ DETAILS }}',
+        ],
+        [
+          $ticket['page'],
+          $ticket['email'],
+          $ticket['name'],
+          $ticket['details'],
+        ], $settings['body']
+      ),
     ];
 
     try {

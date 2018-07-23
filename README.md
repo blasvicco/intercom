@@ -4,18 +4,15 @@ Interface for Intercom
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.23 or later.
-This plugin requires [intercom/intercom-php](https://github.com/intercom/intercom-php) or later.
+This plugin requires:
+  - [Craft CMS 3.0.0](https://craftcms.com/news/craft-3) or later.
+  - [intercom/intercom-php](https://github.com/intercom/intercom-php) or later.
 
 ## Installation
 
 To install the plugin, follow these instructions.
 
-1. Open your terminal and go to your Craft project:
-
-        cd /path/to/project
-
-2. Then tell Composer to load the plugin:
+1. Then tell Composer to load the plugin:
 
         ```BASH
         cd {craft app folder}
@@ -30,7 +27,7 @@ Routes an email through intercom creating the user if doesn't exist.
 
 ## Configuring Intercom
 
-A file called `intercom.php` need to be created with the next settings:
+A file called `config/intercom.php` need to be created with the next settings:
 
 ```PHP
 return [
@@ -40,7 +37,8 @@ return [
 ];
 ```
 
-Where `{{ PAGE }}` and `{{ DETAILS }}` are fields from the `$_POST`.
+Where `{{ PAGE }}` and `{{ DETAILS }}` are the fields from the `$_POST`.
+The other fields are also available like `{{ EMAIL }}` or `{{ NAME }}`.
 
 ## Using Intercom
 
@@ -64,9 +62,7 @@ A valid token can be requested to `intercom/api/token` that will retunr a JSON l
 }
 ```
 
-## Intercom Roadmap
-
-Some things to do, and ideas for potential features:
+Tokens are valid for no more than 5 minutes.
 
 * Release it
 
