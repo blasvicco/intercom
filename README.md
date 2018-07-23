@@ -14,12 +14,12 @@ To install the plugin, follow these instructions.
 
 1. Then tell Composer to load the plugin:
 
-        ```BASH
-        cd {craft app folder}
-        composer config repositories.blasvicco.intercom vcs https://github.com/blasvicco/intercom.git
-        composer require blasvicco/intercom
-        ./craft install/plugin intercom
-        ```
+```BASH
+cd {craft app folder}
+composer config repositories.blasvicco.intercom vcs https://github.com/blasvicco/intercom.git
+composer require blasvicco/intercom
+./craft install/plugin intercom
+```
 
 ## Intercom Overview
 
@@ -54,11 +54,11 @@ In order to use the plugin after install you need to generate a FORM that post t
   ]
 ```
 
-A valid token can be requested to `intercom/api/token` that will retunr a JSON like this one:
+A valid token can be requested to `intercom/api/token` that will return a JSON like this one:
 
 ```JSON
 {
-  "token":"Z0FmbC9tbnFXSnBUMmZHZDZNZVkyd3RLUHk2c2xUaU8vakFNWHpWdm5WRStaeS8xYXhYaTRCM3VGcWQyTmJ2b1RUMHg3bS9xcUJIb3FHRS9TZ0ZZWHRmUTV5OERsY2orV1dxSnIvVGZ4WjQ9"
+  "token":"Z0FmbC9tbnFXSnBUMmZHZDZNZV..."
 }
 ```
 
