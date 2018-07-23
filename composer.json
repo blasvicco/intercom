@@ -1,0 +1,37 @@
+{
+    "name": "blasvicco/intercom",
+    "description": "Interface for Intercom",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "intercom"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Blas Vicco",
+            "homepage": "https://github.com/blasvicco"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "intercom/intercom-php": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+          "blasvicco\\intercom\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Intercom",
+        "handle": "intercom",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://github.com/blasvicco/intercom/CHANGELOG.md",
+        "class": "blasvicco\\intercom\\Intercom"
+    }
+}
