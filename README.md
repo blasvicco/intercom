@@ -12,8 +12,6 @@ This plugin requires:
 
 To install the plugin, follow these instructions.
 
-1. Then tell Composer to load the plugin:
-
 ```BASH
 cd {craft app folder}
 composer config repositories.blasvicco.intercom vcs https://github.com/blasvicco/intercom.git
