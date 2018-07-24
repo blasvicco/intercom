@@ -18,6 +18,7 @@ use Intercom\IntercomClient;
 
 use \DateTime;
 use \DateInterval;
+use \Exception;
 
 /**
  * @author    Blas Vicco
@@ -108,7 +109,10 @@ class ApiController extends Controller {
       $date->sub(new DateInterval('P0DT0H5M0S'));
       $tokenDateTime = DateTime::createFromFormat('YmdHis', $token[1] ?? NULL);
 
-      return $token[0] == $phrase && ($date < $tokenDateTime) && $tokenDateTime < (new DateTime("now"));
+      if ($token[0] == $phrase && ($date < $tokenDateTime) && $tokenDateTime < (new DateTime("now"))) return TRUE;
+
+      $this->lastError =  new Exception(Craft::t('intercom', 'Invalid token'));
+      return FALSE;
     }
 
   /**
@@ -118,7 +122,7 @@ class ApiController extends Controller {
   private function emailFromUser($ticket) : bool {
     $settings = Intercom::$plugin->getSettings();
     if (empty($settings['oauth'])) {
-      $this->lastError = Craft::t('intercom', 'Missing configuration file');
+      $this->lastError = new Exception(Craft::t('intercom', 'Missing configuration file'));
       return FALSE;
     }
 
@@ -134,7 +138,7 @@ class ApiController extends Controller {
             'email' => $ticket['email'],
             'name'  => $ticket['name']
           ]);
-        } catch (\Exception $err) {
+        } catch (Exception $err) {
           $this->lastError = $err;
           return FALSE;
         }
@@ -168,7 +172,7 @@ class ApiController extends Controller {
 
     try {
       $client->messages->create($email);
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
       $this->lastError = $e;
       return FALSE;
     }

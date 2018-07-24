@@ -18,4 +18,5 @@ return [
     'Not valid post' => 'Not valid post',
     'Post sent successfully' => 'Post sent successfully',
     'Missing configuration file' => 'Missing configuration file',
+    'Invalid token' => 'Invalid token',
 ];
