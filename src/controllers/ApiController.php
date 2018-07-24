@@ -62,7 +62,7 @@ class ApiController extends Controller {
           'msg'    => Craft::t('intercom', 'Post sent successfully')
         ];
       } else {
-        $response['exception'] = "\n" . $this->lastError;
+        $response['exception'] = $this->lastError;
       }
       return $this->asJson($response);
     }
