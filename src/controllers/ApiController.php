@@ -117,8 +117,13 @@ class ApiController extends Controller {
    */
   private function emailFromUser($ticket) : bool {
     $settings = Intercom::$plugin->getSettings();
-    $client   = new IntercomClient($settings['oauth'], null);
+    if (empty($settings['oauth'])) {
+      $this->lastError = Craft::t('intercom', 'Missing configuration file');
+      return FALSE;
+    }
 
+
+    $client   = new IntercomClient($settings['oauth'], null);
     try {
       $user = $client->users->getUsers(["email" => $ticket['email']]);
     } catch(\GuzzleHttp\Exception\ClientException $e) {

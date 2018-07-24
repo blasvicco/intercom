@@ -17,4 +17,5 @@ return [
     'Intercom plugin loaded' => 'Intercom plugin loaded',
     'Not valid post' => 'Not valid post',
     'Post sent successfully' => 'Post sent successfully',
+    'Missing configuration file' => 'Missing configuration file',
 ];
