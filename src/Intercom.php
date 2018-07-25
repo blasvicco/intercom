@@ -27,7 +27,7 @@ use blasvicco\intercom\models\Settings;
  *
  * @author    Blas Vicco
  * @package   Intercom
- * @since     1.0.2
+ * @since     1.0.4
  *
  */
 class Intercom extends Plugin

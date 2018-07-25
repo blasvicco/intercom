@@ -2,7 +2,7 @@
     "name": "blasvicco/intercom",
     "description": "Interface for Intercom",
     "type": "craft-plugin",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "keywords": [
         "craft",
         "cms",

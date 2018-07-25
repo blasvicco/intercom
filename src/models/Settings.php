@@ -18,7 +18,7 @@ use craft\base\Model;
 /**
  * @author    Blas Vicco
  * @package   Intercom
- * @since     1.0.2
+ * @since     1.0.4
  */
 class Settings extends Model
 {

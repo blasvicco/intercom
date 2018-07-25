@@ -15,3 +15,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 1.0.2 - 2018-07-23
 ### Added
 - Optional redirection setting
+
+## 1.0.3 - 2018-07-23
+### Fix
+- Wrong `;`
+
+## 1.0.4 - 2018-07-23
+### Fix
+- Versioning
