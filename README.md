@@ -63,6 +63,4 @@ A valid token can be requested to `intercom/api/token` that will return a JSON l
 
 Tokens are valid for no more than 5 minutes.
 
-* Release it
-
 Brought to you by [Blas Vicco](https://github.com/blasvicco)
