@@ -31,13 +31,13 @@ A file called `config/intercom.php` need to be created with the next settings:
 return [
   'oauth'  => getenv('YOUR_INTERCOM_OAUTH_HERE'),
   'appId'  => getenv('YOUR_INTERCOM_APP_ID_HERE'),
-  'body' => "WEB FORM:\nSubject: {{ PAGE }}\n {{ DETAILS }}."
+  'body' => "WEB FORM:\nSubject: _PAGE_\n _DETAILS_"
 ];
 ```
 
-Where `{{ PAGE }}` and `{{ DETAILS }}` are the fields from the `$_POST`.
+Where `_PAGE_` and `_DETAILS_` are the fields from the `$_POST`.
 
-Other fields are also available like `{{ EMAIL }}` or `{{ NAME }}`.
+Other fields are also available like `_EMAIL_` or `_NAME_`.
 
 ## Using Intercom
 
