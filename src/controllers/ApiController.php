@@ -67,7 +67,7 @@ class ApiController extends Controller {
 
       $settings = Intercom::$plugin->getSettings();
       return (!Craft::$app->getRequest()->getIsAjax() && $settings['redirect'])
-        ? Craft::$app->getResponse()->redirect($settings['redirect']);
+        ? Craft::$app->getResponse()->redirect($settings['redirect'])
         : $this->asJson($response);
     }
 
