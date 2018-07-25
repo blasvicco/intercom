@@ -32,6 +32,7 @@ return [
   'oauth'  => getenv('YOUR_INTERCOM_OAUTH_HERE'),
   'appId'  => getenv('YOUR_INTERCOM_APP_ID_HERE'),
   'body' => "WEB FORM:\nSubject: _PAGE_\n _DETAILS_",
+  //'redirect' => '\home', // optional redirection when not ajax request
   'requireToken' => TRUE, // could it be FALSE and token validation will be skipped
 ];
 ```

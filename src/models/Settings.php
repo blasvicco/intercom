@@ -18,7 +18,7 @@ use craft\base\Model;
 /**
  * @author    Blas Vicco
  * @package   Intercom
- * @since     1.0.1
+ * @since     1.0.2
  */
 class Settings extends Model
 {
@@ -41,6 +41,11 @@ class Settings extends Model
     public $body = null;
 
     /**
+     * @var string
+     */
+    public $redirect = null;
+
+    /**
      * @var bool
      */
     public $requireToken = TRUE;
@@ -54,7 +59,7 @@ class Settings extends Model
     public function rules()
     {
         return [
-            [['oauth', 'appId', 'body'], 'string'],
+            [['oauth', 'appId', 'body', 'redirect'], 'string'],
             [['requireToken'], 'bool'],
             [['oauth', 'appId', 'body'], 'required']
         ];

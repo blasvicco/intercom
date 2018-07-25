@@ -23,7 +23,7 @@ use \Exception;
 /**
  * @author    Blas Vicco
  * @package   Intercom
- * @since     1.0.1
+ * @since     1.0.2
  */
 class ApiController extends Controller {
 
@@ -64,7 +64,11 @@ class ApiController extends Controller {
       } else {
         $response['exception'] = (string) $this->lastError;
       }
-      return $this->asJson($response);
+
+      $settings = Intercom::$plugin->getSettings();
+      return (!Craft::$app->getRequest()->getIsAjax() && $settings['redirect'])
+        ? Craft::$app->getResponse()->redirect($settings['redirect']);
+        : $this->asJson($response);
     }
 
     /**
