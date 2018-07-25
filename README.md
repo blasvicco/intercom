@@ -31,7 +31,8 @@ A file called `config/intercom.php` need to be created with the next settings:
 return [
   'oauth'  => getenv('YOUR_INTERCOM_OAUTH_HERE'),
   'appId'  => getenv('YOUR_INTERCOM_APP_ID_HERE'),
-  'body' => "WEB FORM:\nSubject: _PAGE_\n _DETAILS_"
+  'body' => "WEB FORM:\nSubject: _PAGE_\n _DETAILS_",
+  'requireToken' => TRUE, // could it be FALSE and token validation will be skipped
 ];
 ```
 

@@ -89,7 +89,7 @@ class ApiController extends Controller {
      * @return bool ticket data is valid
      */
     private function isValidTicket($ticket) : bool {
-      return isset($ticket) && $this->isValidToken($ticket['extra'])
+      return isset($ticket) && $this->isValidToken($ticket['extra'] ?? NULL)
         && filter_var($ticket['email'], FILTER_VALIDATE_EMAIL)
         && isset($ticket['name']) && isset($ticket['details']);
     }
@@ -98,6 +98,9 @@ class ApiController extends Controller {
      * @return bool token is valid
      */
     private function isValidToken($token) : bool {
+      $settings = Intercom::$plugin->getSettings();
+      if ($settings['requireToken'] === FALSE) return TRUE;
+
       $key    = Craft::$app->getSession()->get('intercom_key');
       $iv     = Craft::$app->getSession()->get('intercom_iv');
       $phrase = Craft::$app->getSession()->get('intercom_phrase');

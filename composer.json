@@ -31,7 +31,7 @@
         "handle": "intercom",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://github.com/blasvicco/intercom/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/blasvicco/intercom/CHANGELOG.md",
         "class": "blasvicco\\intercom\\Intercom"
     }
 }

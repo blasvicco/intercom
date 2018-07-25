@@ -40,6 +40,11 @@ class Settings extends Model
      */
     public $body = null;
 
+    /**
+     * @var bool
+     */
+    public $requireToken = TRUE;
+
     // Public Methods
     // =========================================================================
 
@@ -50,6 +55,7 @@ class Settings extends Model
     {
         return [
             [['oauth', 'appId', 'body'], 'string'],
+            [['requireToken'], 'bool'],
             [['oauth', 'appId', 'body'], 'required']
         ];
     }
