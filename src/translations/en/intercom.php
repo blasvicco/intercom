@@ -11,7 +11,7 @@
 /**
  * @author    Blas Vicco
  * @package   Intercom
- * @since     1.0.4
+ * @since     1.0.5
  */
 return [
     'Intercom plugin loaded' => 'Intercom plugin loaded',

@@ -23,3 +23,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 1.0.4 - 2018-07-23
 ### Fix
 - Versioning
+
+## 1.0.5 - 2018-07-26
+### Added
+- .craftplugin file
