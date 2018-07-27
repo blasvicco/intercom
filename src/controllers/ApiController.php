@@ -152,6 +152,10 @@ class ApiController extends Controller {
       }
     }
 
+    $keys = array_map(function($key){
+        return '_' . strtoupper($key) . '_';
+    }, array_keys($ticket));
+
     $email = [
       'from' => [
         'type'  => 'user',
@@ -162,11 +166,7 @@ class ApiController extends Controller {
         'type'  => 'admin',
         'email' => $settings['appId'] . '@incoming.intercom.io',
       ],
-      'body' => str_replace(
-        ['_PAGE_', '_EMAIL_', '_NAME_', '_DETAILS_'],
-        [$ticket['page'], $ticket['email'], $ticket['name'], $ticket['details']],
-        $settings['body']
-      ),
+      'body' => str_replace($keys, array_values($ticket), $settings['body']),
     ];
 
     try {
