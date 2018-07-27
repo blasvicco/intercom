@@ -1,7 +1,7 @@
 {
     "pluginName": "Intercom",
     "pluginDescription": "Interface for Intercom",
-    "pluginVersion": "1.0.5",
+    "pluginVersion": "1.0.6",
     "pluginAuthorName": "Blas Vicco",
     "pluginVendorName": "BlasVicco",
     "pluginAuthorUrl": "https://github.com/blasvicco",

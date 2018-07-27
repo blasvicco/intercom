@@ -23,7 +23,7 @@ use \Exception;
 /**
  * @author    Blas Vicco
  * @package   Intercom
- * @since     1.0.5
+ * @since     1.0.6
  */
 class ApiController extends Controller {
 

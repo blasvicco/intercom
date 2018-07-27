@@ -27,3 +27,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 1.0.5 - 2018-07-26
 ### Added
 - .craftplugin file
+
+## 1.0.6 - 2018-07-28
+### Added
+- .Capturing all the form fields to make them available for body content.

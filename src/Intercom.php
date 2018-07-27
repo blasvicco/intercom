@@ -27,7 +27,7 @@ use blasvicco\intercom\models\Settings;
  *
  * @author    Blas Vicco
  * @package   Intercom
- * @since     1.0.5
+ * @since     1.0.6
  *
  */
 class Intercom extends Plugin
@@ -46,7 +46,7 @@ class Intercom extends Plugin
     /**
      * @var string
      */
-    public $schemaVersion = '1.0.5';
+    public $schemaVersion = '1.0.6';
 
     // Public Methods
     // =========================================================================

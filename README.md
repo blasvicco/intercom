@@ -39,7 +39,7 @@ return [
 
 Where `_PAGE_` and `_DETAILS_` are the fields from the `$_POST`.
 
-Other fields are also available like `_EMAIL_` or `_NAME_`.
+Any `$_POST` fields are also available using the name like `_EMAIL_` or `_NAME_`.
 
 ## Using Intercom
 
